@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel=" icon" href="pic/gym-icon-png-kansas-city-5.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+    <link rel="stylesheet" href="fit.css"> 
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Fitness Tracker</h1>
+        <div id="logForm">
+            <h2>Log Your Workout</h2>
+            <form id="workoutForm">
+                <label for="exerciseType">Exercise Type:</label>
+                <select id="exerciseType">
+                    <option value="running">Running</option>
+                    <option value="cycling">Cycling</option>
+                    <option value="weightlifting">Weightlifting</option>
+                    <option value="yoga">Yoga</option>
+                    <option value ="jogging">jogging</option>
+                    <option value ="squat">squat</option>
+                </select><br><br>
+                <label for="duration">Duration (minutes):</label>
+                <input type="number" id="duration" min="1" required><br><br>
+                <label for="calories">Calories Burned:</label>
+                <input type="number" id="calories" min="1" required><br><br>
+                <button type="submit">Log Workout</button>
+            </form>
+        </div>
+        <canvas id="workoutChart"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="workout.js"></script> 
+</body>
+</html>
